@@ -3,10 +3,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dark-gray': '#23272a',
+        'light-gray': '#9EA3A8',
         'gray': '#2c2f33',
-        'light-gray': '#99aab5',
-        'custom-blue': '#7289da',
+        'dark-gray': '#14171B',
+        'custom-blue': '#5069C5',
       },
     },
     fontFamily: {

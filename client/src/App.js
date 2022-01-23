@@ -1,13 +1,16 @@
-import logo from './images/test.png';
+import React from "react";
+import Navbar from "./comp/Navbar/Navbar";
+import Field from "./comp/RegexField/Field";
 
 function App() {
   return (
-    <div className="bg-dark-gray w-screen h-screen">
-      <div className="h-16 bg-gray w-screen">
-        <div className="h-full w-16 p-2 ml-4 flex flex-row items-center gap-8">
-          <img src={logo} alt="Regex Trainer Logo" className="invert"/>
-          <p className="text-white text-2xl font-poppins">RegexTrainer</p>
+    <div className="bg-dark-gray w-screen h-screen flex flex-col">
+      <Navbar />
+      <div className="h-full w-full flex flex-row">
+        <div className="bg-light-gray h-full w-80 p-4">
+          <div className="bg-custom-blue h-16 w-4 relative top-1/2 left-full ml-2 hover:cursor-pointer"></div>
         </div>
+        <Field />
       </div>
     </div>
   );
