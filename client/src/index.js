@@ -1,10 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { RegexSynProv } from "./context/Regex_context";
 
 ReactDOM.render(
-    <App />,
-  document.getElementById('root')
+  <RegexSynProv>
+    <App />
+  </RegexSynProv>,
+  document.getElementById("root")
 );
-

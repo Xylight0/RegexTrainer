@@ -16,3 +16,17 @@ input, textarea {
 input:focus, textarea:focus {
     outline: none;
 }
+
+.inputBefore::before {
+    content: "/";
+    color: #5069C5;
+}
+
+.inputBefore::after {
+    content: "/g";
+    color: #5069C5;
+}
+
+input {
+    width: 5ch;
+}
