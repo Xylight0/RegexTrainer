@@ -15,6 +15,7 @@ export default function TextCheck(props) {
     textareaVal.current.value = text;
   }, []);
 
+  
   return (
     <div className="flex flex-col gap-4 h-full">
       <div className="rounded-md bg-custom-blue w-fit px-3 py-2">
