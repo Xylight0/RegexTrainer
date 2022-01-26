@@ -17,7 +17,7 @@ input:focus, textarea:focus {
     outline: none;
 }
 
-.inputBefore::before {
+/*.inputBefore::before {
     content: "/";
     color: #5069C5;
 }
@@ -25,8 +25,8 @@ input:focus, textarea:focus {
 .inputBefore::after {
     content: "/g";
     color: #5069C5;
-}
+}*/
 
-input {
+/*input {
     width: 6ch;
-}
+}*/
