@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 
 const RegexContext = React.createContext();
 
-function regexSyntax() {
-  return "test";
+export function useRegexSyntax() {
+  return useContext(RegexContext);
 }
 
-function RegexSynProv({ children }) {
+export function RegexProv({ children }) {
+
+  const [regexSyntax, setRegexSyntax] = useState("");
+
+  const value = {
+    regexSyntax,
+    setRegexSyntax,
+  };
+
   return (
-    <RegexContext.Provider value={regexSyntax}>
+    <RegexContext.Provider value={value}>
       {children}
     </RegexContext.Provider>
   );
 }
-
-export { RegexSynProv };

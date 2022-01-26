@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { RegexSynProv } from "./context/Regex_context";
+import { RegexProv } from "./context/Regex_context";
 
 ReactDOM.render(
-  <RegexSynProv>
+  <RegexProv>
     <App />
-  </RegexSynProv>,
+  </RegexProv>,
   document.getElementById("root")
 );

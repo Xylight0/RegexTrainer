@@ -1,11 +1,13 @@
 import React from "react";
+import { useRegexSyntax } from "../../../context/Regex_context";
 
 export default function Expression() {
+  const { setRegexSyntax } = useRegexSyntax();
+
   function inputLength(e) {
     let val = e.target.value;
-
     e.target.style.width = val.length + "ch";
-    console.log(val);
+    setRegexSyntax(val);
   }
 
   return (
