@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRegexSyntax } from "../../../context/Regex_context";
 
 export default function Expression() {
   const { setRegexSyntax } = useRegexSyntax();
+  const [regexInput, setRegexInput] = useState("\\w");
 
-  function inputLength(e) {
+  function input(e) {
     let val = e.target.value;
     //e.target.style.width = val.length + "ch";
     setRegexSyntax(val);
   }
+
+  useEffect(() => {
+    setRegexSyntax(regexInput);
+  }, [regexInput, setRegexSyntax]);
+  
 
   return (
     <div className="flex flex-col gap-4">
@@ -20,8 +26,9 @@ export default function Expression() {
           <input
             type="text"
             //placeholder="([A-Z])"
-            defaultValue="([A-Z])"
-            onChange={(e) => inputLength(e)}
+            onLoadedData={() => {console.log("loaddddddddddddddddddddddd");}}
+            defaultValue={regexInput}
+            onChange={(e) => setRegexInput(e.target.value)}
             className="border-none text-dark-gray font-bold text-lg w-full"
           />
         </div>
