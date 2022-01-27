@@ -1,20 +1,28 @@
 import React, { useEffect, useRef } from "react";
-import { loremIpsum } from "react-lorem-ipsum";
 import { useRegexSyntax } from "../../../context/Regex_context";
 
 export default function TextOutput(props) {
   const textareaVal = useRef();
-  const { regexSyntax } = useRegexSyntax();
+  const { regexSyntax, textInput, setTextOutput } = useRegexSyntax();
+
+  function textEvaluation(syntax) {
+    console.log("Input: " + textInput);
+    let result;
+    try {
+      result = textInput.match(syntax);
+    } catch (e) {
+      return "Invalid Regex Expression..."
+    }
+    setTextOutput(result);
+    return result;
+  }
 
   useEffect(() => {
     console.log("Regex Syntax: " + regexSyntax);
-    let text = loremIpsum() + "";
-    text = text
-      .split(" ")
-      .map((e) => e + " - ")
-      .join("");
+    let text = textEvaluation(regexSyntax);
+    console.log("Output: " + text);
     textareaVal.current.value = text;
-  }, [regexSyntax]);
+  }, [regexSyntax, textInput]);
 
   return (
     <div className="flex flex-col gap-4 h-full">

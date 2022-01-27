@@ -1,20 +1,26 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { loremIpsum } from "react-lorem-ipsum";
 import { useRegexSyntax } from "../../../context/Regex_context";
 
-export default function TextCheck(props) {
+export default function TextInput(props) {
   const textareaVal = useRef();
-  const { regexSyntax } = useRegexSyntax();
+  const { setTextInput } = useRegexSyntax();
+  const [input, setInput] = useState("");
 
   useEffect(() => {
-    console.log("Regex Syntax: " + regexSyntax);
     let text = loremIpsum() + "";
-    text = text
+    text = "Visit W3Schools";
+    textareaVal.current.value = text;
+  }, []);
+
+  useEffect(() => {
+    /*text = text
       .split(" ")
       .map((e) => e + " - ")
-      .join("");
-    textareaVal.current.value = text;
-  }, [regexSyntax]);
+      .join("");*/
+    console.log("test");
+    setTextInput(textareaVal.current.value);
+  }, [input, setTextInput]);
 
   return (
     <div className="flex flex-col gap-4 h-full">
@@ -23,6 +29,7 @@ export default function TextCheck(props) {
       </div>
       <div className="w-full h-full bg-light-gray rounded-md flex p-4">
         <textarea
+          onChange={(e) => setInput(e.target.value)}
           ref={textareaVal}
           type="text"
           className="resize-none h-full w-full border-none text-dark-gray font-bold text-lg"

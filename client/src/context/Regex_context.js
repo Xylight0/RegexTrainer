@@ -9,10 +9,16 @@ export function useRegexSyntax() {
 export function RegexProv({ children }) {
 
   const [regexSyntax, setRegexSyntax] = useState("");
+  const [textInput, setTextInput] = useState("");
+  const [textOutput, setTextOutput] = useState("");
 
   const value = {
     regexSyntax,
     setRegexSyntax,
+    textInput,
+    setTextInput,
+    textOutput,
+    setTextOutput
   };
 
   return (
