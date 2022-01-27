@@ -5,12 +5,6 @@ export default function Expression() {
   const { setRegexSyntax } = useRegexSyntax();
   const [regexInput, setRegexInput] = useState("\\w");
 
-  function input(e) {
-    let val = e.target.value;
-    //e.target.style.width = val.length + "ch";
-    setRegexSyntax(val);
-  }
-
   useEffect(() => {
     setRegexSyntax(regexInput);
   }, [regexInput, setRegexSyntax]);

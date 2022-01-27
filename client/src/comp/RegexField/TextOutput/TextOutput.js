@@ -9,9 +9,10 @@ export default function TextOutput(props) {
     console.log("Input: " + textInput);
     let result;
     try {
-      result = textInput.match(syntax);
+      let exp = new RegExp(syntax, "g");
+      result = textInput.match(exp);
     } catch (e) {
-      return "Invalid Regex Expression..."
+      return "Invalid Regex Expression...";
     }
     setTextOutput(result);
     return result;
