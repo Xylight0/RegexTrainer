@@ -19,8 +19,6 @@ export default function Expression() {
         <div className="inputBefore font-bold text-lg w-full">
           <input
             type="text"
-            //placeholder="([A-Z])"
-            onLoadedData={() => {console.log("loaddddddddddddddddddddddd");}}
             defaultValue={regexInput}
             onChange={(e) => setRegexInput(e.target.value)}
             className="border-none text-dark-gray font-bold text-lg w-full"
