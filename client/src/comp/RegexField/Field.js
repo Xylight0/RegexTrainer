@@ -1,6 +1,6 @@
 import React from 'react';
 import Expression from './Expression/Expression';
-import TextInput from './TextCheck/TextInput';
+import TextInput from './TextInput/TextInput';
 import TextOutput from './TextOutput/TextOutput';
 
 export default function Field() {
