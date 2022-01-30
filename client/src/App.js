@@ -1,4 +1,5 @@
 import React from "react";
+import List from "./comp/LearnSection/List";
 import Navbar from "./comp/Navbar/Navbar";
 import Field from "./comp/RegexField/Field";
 
@@ -9,6 +10,7 @@ function App() {
       <div className="h-full w-full flex flex-row">
         <div className="bg-light-gray h-full w-80 p-4">
           <div className="bg-custom-blue h-16 w-4 relative top-1/2 left-full ml-2 hover:cursor-pointer"></div>
+          <List></List>
         </div>
         <Field />
       </div>
