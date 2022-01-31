@@ -8,9 +8,8 @@ export default function List() {
     for (let i = 0; i < 100; i++) {
       informations.push(loremIpsum());
     }
-    console.log(informations)
-    return informations.map((e) => (
-      <div className="bg-gray p-4 rounded-md text-white flex w-max grow">{e}</div>
+    return informations.map((e, i) => (
+      <div key={i} className="bg-gray p-4 rounded-md text-white flex w-max grow">{e}</div>
     ))
   }
 
