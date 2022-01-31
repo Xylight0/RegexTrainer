@@ -5,11 +5,10 @@ import Field from "./comp/RegexField/Field";
 
 function App() {
   return (
-    <div className="bg-dark-gray w-screen h-screen flex flex-col">
+    <div className="bg-dark-gray w-screen h-screen flex flex-col overflow-hidden">
       <Navbar />
-      <div className="h-full w-full flex flex-row">
-        <div className="bg-light-gray h-full w-80 p-4">
-          <div className="bg-custom-blue h-16 w-4 relative top-1/2 left-full ml-2 hover:cursor-pointer"></div>
+      <div className="h-full w-full flex flex-row overflow-hidden">
+        <div className="bg-light-gray h-full w-80 py-2 px-2 overflow-scroll">
           <List></List>
         </div>
         <Field />
