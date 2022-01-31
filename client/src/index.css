@@ -49,5 +49,5 @@ input:focus, textarea:focus {
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #161414; 
+    background: #2c2f33; 
   }

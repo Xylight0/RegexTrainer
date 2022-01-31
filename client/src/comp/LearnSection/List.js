@@ -6,11 +6,11 @@ export default function List() {
 
   function addInfo() {
     for (let i = 0; i < 100; i++) {
-      informations.push("loremIpsum()dddddddddddddddddddddd");
+      informations.push(loremIpsum());
     }
     console.log(informations)
     return informations.map((e) => (
-      <div className="bg-gray p-4 rounded-md text-white flex w-fit">{e}</div>
+      <div className="bg-gray p-4 rounded-md text-white flex w-max grow">{e}</div>
     ))
   }
 
