@@ -25,9 +25,10 @@ input:focus, textarea:focus {
     content: '';
     background-color: #5069C5;
     position: absolute;
-    left: 0;
-    width: 4px;
-    height: 10%;
+    left: 18%;
+    top: 50%;
+    width: 20px;
+    height: 80px;
     cursor: ew-resize;
 }
 
