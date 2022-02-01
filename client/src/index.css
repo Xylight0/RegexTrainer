@@ -25,7 +25,9 @@ input:focus, textarea:focus {
     content: '';
     background-color: #5069C5;
     position: absolute;
-    left: 18%;
+    text-align: left;
+    float:right;
+    right: 0%;
     top: 50%;
     width: 20px;
     height: 80px;
