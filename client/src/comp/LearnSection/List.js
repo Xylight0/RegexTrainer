@@ -32,7 +32,7 @@ export default function List() {
   return (
     <>
       <div className="pt-2">
-        <p className="text-large font-semibold">
+        <p className="text-lg font-semibold">
           JavaScript RegEx Reference by{" "}
           <a
             className="text-custom-blue font-bold"

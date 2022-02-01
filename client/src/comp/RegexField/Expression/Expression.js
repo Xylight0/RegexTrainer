@@ -42,26 +42,27 @@ export default function Expression() {
             className="border-none text-dark-gray font-bold text-lg w-full"
           />
           <div className="flex flex-row gap-4">
+            <div className="flex items-center">Modifiers:</div>
             <button
               onClick={stateChange}
               value="g"
               className="btnOne w-8 px-2 py-1 rounded-md text-white font-semibold bg-gray"
             >
-              G
+              g
             </button>
             <button
               onClick={stateChange}
               value="i"
               className="btnTwo w-8 px-2 py-1 rounded-md text-white font-semibold bg-gray"
             >
-              I
+              i
             </button>
             <button
               onClick={stateChange}
               value="m"
               className="btnThree w-8 px-2 py-1 rounded-md text-white font-semibold bg-gray"
             >
-              M
+              m
             </button>
           </div>
         </div>
