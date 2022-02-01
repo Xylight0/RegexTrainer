@@ -26,14 +26,12 @@ export default function Expression() {
     }
   }
 
-  useEffect(() => {
-    console.log(modifier);
-  }, [modifier]);
-
   return (
     <div className="flex flex-col gap-4">
       <div className="rounded-md bg-custom-blue w-fit px-3 py-2">
-        <p className="text-dark-gray font-bold font-poppins text-xl">Expression</p>
+        <p className="text-dark-gray font-bold font-poppins text-xl">
+          Expression
+        </p>
       </div>
       <div className="w-full bg-light-gray h-16 rounded-md flex items-center px-4">
         <div className="inputBefore font-bold text-lg w-full flex flex-row">

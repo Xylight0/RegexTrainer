@@ -14,11 +14,6 @@ export default function TextInput(props) {
   }, []);
 
   useEffect(() => {
-    /*text = text
-      .split(" ")
-      .map((e) => e + " - ")
-      .join("");*/
-    console.log("test");
     setTextInput(textareaVal.current.value);
   }, [input, setTextInput]);
 

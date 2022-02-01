@@ -33,9 +33,9 @@ export default function List() {
     <>
       <div className="pt-2">
         <p className="text-large font-semibold">
-          JavaScript RegExp Reference by{" "}
+          JavaScript RegEx Reference by{" "}
           <a
-            className="text-custom-blue"
+            className="text-custom-blue font-bold"
             href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp"
           >
             W3S

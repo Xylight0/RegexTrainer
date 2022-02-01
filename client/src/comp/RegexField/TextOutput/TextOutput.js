@@ -6,7 +6,6 @@ export default function TextOutput(props) {
   const { regexSyntax, textInput, setTextOutput } = useRegexSyntax();
 
   function textEvaluation(syntax) {
-    console.log("Input: " + textInput);
     let result;
     try {
       let exp = new RegExp(syntax, "g");
@@ -19,9 +18,7 @@ export default function TextOutput(props) {
   }
 
   useEffect(() => {
-    console.log("Regex Syntax: " + regexSyntax);
     let text = textEvaluation(regexSyntax);
-    console.log("Output: " + text);
     textareaVal.current.value = text;
   }, [regexSyntax, textInput]);
 
@@ -32,9 +29,10 @@ export default function TextOutput(props) {
       </div>
       <div className="w-full h-full bg-light-gray rounded-md flex p-4">
         <textarea
+          readOnly
           ref={textareaVal}
           type="text"
-          className="resize-none h-full w-full border-none text-dark-gray font-bold text-lg"
+          className="resize-none h-full w-full border-none text-dark-gray font-bold text-lg hover:cursor-not-allowed"
         />
       </div>
     </div>
