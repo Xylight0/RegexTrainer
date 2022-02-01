@@ -25,7 +25,7 @@ export default function TextInput(props) {
   return (
     <div className="flex flex-col gap-4 h-full">
       <div className="rounded-md bg-custom-blue w-fit px-3 py-2">
-        <p className="text-dark-gray font-bold font-poppins">Input</p>
+        <p className="text-dark-gray font-bold font-poppins text-xl">Input</p>
       </div>
       <div className="w-full h-full bg-light-gray rounded-md flex p-4">
         <textarea

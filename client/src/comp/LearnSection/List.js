@@ -12,7 +12,7 @@ export default function List() {
     }
     return informations.information.section.map((e, i) => (
       <div key={i}>
-        <p className="py-4 rounded-md text-black font-bold text-xl flex w-max grow">
+        <p className="py-4 rounded-md text-black font-bold text-2xl flex w-max grow">
           {e.title}
         </p>
         <div className="flex flex-col gap-4">{addPoints(i)}</div>
