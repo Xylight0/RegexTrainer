@@ -3,12 +3,12 @@ import { useRegexSyntax } from "../../../context/Regex_context";
 
 export default function TextOutput(props) {
   const textareaVal = useRef();
-  const { regexSyntax, textInput, setTextOutput } = useRegexSyntax();
+  const { regexSyntax, textInput, setTextOutput, modifier } = useRegexSyntax();
 
   function textEvaluation(syntax) {
     let result;
     try {
-      let exp = new RegExp(syntax, "g");
+      let exp = new RegExp(syntax, modifier);
       result = textInput.match(exp);
     } catch (e) {
       return "Invalid Regex Expression...";
@@ -20,7 +20,8 @@ export default function TextOutput(props) {
   useEffect(() => {
     let text = textEvaluation(regexSyntax);
     textareaVal.current.value = text;
-  }, [regexSyntax, textInput]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [regexSyntax, textInput, modifier]);
 
   return (
     <div className="flex flex-col gap-4 h-full">

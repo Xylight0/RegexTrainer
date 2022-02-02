@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { loremIpsum } from "react-lorem-ipsum";
 import { useRegexSyntax } from "../../../context/Regex_context";
 
 export default function TextInput(props) {
@@ -8,8 +7,7 @@ export default function TextInput(props) {
   const [input, setInput] = useState("");
 
   useEffect(() => {
-    let text = loremIpsum() + "";
-    text = "Visit W3Schools";
+    let text = "Visit W3Schools";
     textareaVal.current.value = text;
   }, []);
 
