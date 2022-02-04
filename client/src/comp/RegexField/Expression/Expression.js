@@ -2,27 +2,29 @@ import React, { useEffect, useState } from "react";
 import { useRegexSyntax } from "../../../context/Regex_context";
 
 export default function Expression() {
-  const { setRegexSyntax, setModifier } = useRegexSyntax();
+  const { setRegexSyntax, setModifier, modifier } = useRegexSyntax();
   const [regexInput, setRegexInput] = useState("\\w");
-  //const [modifier, setModifier] = useState("");
 
   useEffect(() => {
     setRegexSyntax(regexInput);
   }, [regexInput, setRegexSyntax]);
 
   function stateChange(e) {
-    /*if (e.target.value === modifier) {
-      setModifier("");
-    } else {
-      setModifier(e.target.value);
-    }*/
-    setModifier(e.target.value);
     if (e.target.classList.contains("bg-gray")) {
       e.target.classList.remove("bg-gray");
       e.target.classList.add("bg-custom-blue");
+
+      setModifier(modifier + e.target.value);
     } else {
       e.target.classList.remove("bg-custom-blue");
       e.target.classList.add("bg-gray");
+
+      let removeModifier = modifier;
+      let syntax = "[" + e.target.value + "]";
+      let mod = "g";
+      let exp = new RegExp(syntax, mod);
+      removeModifier = removeModifier.replace(exp, "");
+      setModifier(removeModifier);
     }
   }
 

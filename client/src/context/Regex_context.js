@@ -11,7 +11,7 @@ export function RegexProv({ children }) {
   const [regexSyntax, setRegexSyntax] = useState("");
   const [textInput, setTextInput] = useState("");
   const [textOutput, setTextOutput] = useState("");
-  const [modifier, setModifier] = useState("g");
+  const [modifier, setModifier] = useState("");
 
   const value = {
     regexSyntax,

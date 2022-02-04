@@ -20,7 +20,7 @@ export default function TextOutput(props) {
   useEffect(() => {
     let text = textEvaluation(regexSyntax);
     textareaVal.current.value = text;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [regexSyntax, textInput, modifier]);
 
   return (
