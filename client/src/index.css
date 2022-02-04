@@ -21,19 +21,6 @@ input:focus, textarea:focus {
     outline: none;
 }
 
-.leftSection::after {
-    content: '';
-    background-color: #5069C5;
-    position: absolute;
-    text-align: left;
-    float:right;
-    right: 0%;
-    top: 50%;
-    width: 20px;
-    height: 80px;
-    cursor: ew-resize;
-}
-
 /* width */
 ::-webkit-scrollbar {
     width: 14px;
