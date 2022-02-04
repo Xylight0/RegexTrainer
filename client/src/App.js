@@ -4,23 +4,31 @@ import Navbar from "./comp/Navbar/Navbar";
 import Field from "./comp/RegexField/Field";
 
 function App() {
+  let mouseDownBol = false;
   function onMDown(e) {
     console.log(e);
     let resizeListDiv = e.target.parentNode.parentNode.firstChild;
 
     let pos = window.event;
 
-    var posX = pos.clientX;
-    var posY = pos.clientY;
+    var mouseX = pos.clientX;
+    //var mouseY = pos.clientY;
 
-    console.log(posX, posY);
+    //console.log(mouseX, mouseY);
+    mouseDownBol = true;
+    //console.log(mouseDownBol);
 
     document.addEventListener(
       "mousemove",
-      () => {
-        //console.log(resizeListDiv);
-        //resizeListDiv.style.width =
-          //parseInt(getComputedStyle(parent, "").width) + dx + "px";
+      (e) => {
+        const dx = mouseX - e.x;
+        console.log(getComputedStyle(resizeListDiv, "").width);
+
+        resizeListDiv.style.width =
+          parseInt(getComputedStyle(resizeListDiv, "").width) +
+          mouseX -
+          dx +
+          "px";
       },
       false
     );
