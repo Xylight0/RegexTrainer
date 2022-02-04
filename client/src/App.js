@@ -4,11 +4,26 @@ import Navbar from "./comp/Navbar/Navbar";
 import Field from "./comp/RegexField/Field";
 
 function App() {
-
-  function onMDown (e) {
+  function onMDown(e) {
     console.log(e);
-    let m_pos = e.x;
-    //document.addEventListener("mousemove", resize, false);
+    let resizeListDiv = e.target.parentNode.parentNode.firstChild;
+
+    let pos = window.event;
+
+    var posX = pos.clientX;
+    var posY = pos.clientY;
+
+    console.log(posX, posY);
+
+    document.addEventListener(
+      "mousemove",
+      () => {
+        //console.log(resizeListDiv);
+        //resizeListDiv.style.width =
+          //parseInt(getComputedStyle(parent, "").width) + dx + "px";
+      },
+      false
+    );
   }
 
   return (
@@ -19,7 +34,10 @@ function App() {
           <List></List>
         </div>
         <div className="h-full flex items-center">
-          <div onMouseDown={onMDown} className="bg-gray border-r-2 border-t-2 border-b-2 border-custom-blue w-6 h-16 rounded-r-md cursor-ew-resize hover:bg-custom-blue" />
+          <div
+            onMouseDown={onMDown}
+            className="bg-gray border-r-2 border-t-2 border-b-2 border-custom-blue w-6 h-16 rounded-r-md cursor-ew-resize hover:bg-custom-blue"
+          />
         </div>
         <Field />
       </div>
